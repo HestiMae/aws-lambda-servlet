@@ -8,7 +8,7 @@
             "Type": "String"
         },
         "JarKey": {
-            "Default": "simple-1.0-jar-with-dependencies.jar",
+            "Default": "simple-2.0.0-jar-with-dependencies.jar",
             "Description": "Location of the jar in the bucket (an S3 key)",
             "Type": "String"
         }
@@ -124,7 +124,7 @@
                         "Arn"
                     ]
                 },
-                "Runtime": "java8",
+                "Runtime": "java11",
                 "Timeout": 60
             },
             "Type": "AWS::Lambda::Function"
