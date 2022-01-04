@@ -9,8 +9,9 @@ import java.util.Enumeration;
 import java.util.EventListener;
 import java.util.Map;
 import java.util.Set;
-import javax.servlet.*;
-import javax.servlet.descriptor.JspConfigDescriptor;
+import jakarta.servlet.*;
+import jakarta.servlet.ServletRegistration.Dynamic;
+import jakarta.servlet.descriptor.JspConfigDescriptor;
 
 @SuppressWarnings("deprecation")
 public class DummyServletContext implements ServletContext {
@@ -66,4 +67,11 @@ public class DummyServletContext implements ServletContext {
     public ClassLoader getClassLoader() { return getClass().getClassLoader(); }
     public void declareRoles(String... roleNames) { }
     public String getVirtualServerName() { return null; }
+    public Dynamic addJspFile(String servletName, String jspFile) { return null;}
+    public int getSessionTimeout() { return 0; }
+    public void setSessionTimeout(int sessionTimeout) { }
+    public String getRequestCharacterEncoding() { return null; }
+    public void setRequestCharacterEncoding(String encoding) { }
+    public String getResponseCharacterEncoding() { return null; }
+    public void setResponseCharacterEncoding(String encoding) { }
 }

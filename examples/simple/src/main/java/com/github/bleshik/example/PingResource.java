@@ -1,6 +1,6 @@
 package com.github.bleshik.example;
 
-import javax.ws.rs.*;
+import jakarta.ws.rs.*;
 
 @Path("ping")
 public class PingResource {
